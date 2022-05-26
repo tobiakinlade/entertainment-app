@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 function Header() {
   return (
-    <div className='flex space-x-4 bg-[#161D2F] justify-between p-2'>
+    <div className='flex space-x-4 bg-[#161D2F] justify-between p-1'>
       <div>
         <Image
           src='/assets/logo.svg'
@@ -11,7 +11,7 @@ function Header() {
           width={40}
         />
       </div>
-      <div className='flex space-x-6 p-2'>
+      <div className='flex space-x-6 mt-1'>
         <div className=' text-[#FFFFFF]'>
           <Image
             src='/assets/icon-nav-home.svg'
