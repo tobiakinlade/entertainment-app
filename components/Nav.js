@@ -1,13 +1,13 @@
 import Image from 'next/image';
-import Data from '../data.json';
+import data from '../data';
 
 function Nav() {
   return (
-    <nav>
+    <nav className='relative'>
       <h2>Trending</h2>
 
-      <div className='flex space-x-2 scroll-x-2'>
-        {Data.map((post) => {
+      <div className='flex space-x-2 overflow-x-scroll scrollbar-hide'>
+        {data.map((post) => {
           const {
             title,
             thumbnail: { trending, regular },
@@ -24,7 +24,7 @@ function Nav() {
           } = regular;
 
           return (
-            <div key={title}>
+            <div className='last:pr-24' key={title}>
               <Image
                 height={1080}
                 src={reg_small}
@@ -37,6 +37,7 @@ function Nav() {
           );
         })}
       </div>
+      <div className='absolute top-0 right-0 bg-gradient-to-l from-[#06202A] h-10 w-1/12' />
     </nav>
   );
 }
