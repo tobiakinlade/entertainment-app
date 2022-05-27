@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Header from '../components/Header';
 import Nav from '../components/nav';
+import Recommend from '../components/Recommend';
 import Search from '../components/Search';
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Header />
       <Search />
       <Nav />
+      <Recommend />
     </div>
   );
 }
